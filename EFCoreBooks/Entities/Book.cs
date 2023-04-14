@@ -13,6 +13,13 @@ namespace EFCoreBooks.Entities
 		// HashSet no devuelve los datos de forma ordenada
 		public HashSet<Comment> Comments { get; set; } = new HashSet<Comment>();
 
+        // para la relacion con el kind
+        // un book puede ser de varios kinds
+        // cuando esta relacion esta en las dos tablas,
+        // ef crea una tabla intermedia con los dos campos id de las dos tablas
+        public HashSet<Kind> Kinds { get; set; } = new HashSet<Kind>();
+
+
 	}
 }
 
