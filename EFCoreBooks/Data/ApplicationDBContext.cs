@@ -63,7 +63,7 @@ namespace EFCoreBooks.Data
 
         public DbSet<Kind> Kinds => Set<Kind>();
         public DbSet<Author> Autors => Set<Author>();
-        public DbSet<Book> Films => Set<Book>();
+        public DbSet<Book> Books => Set<Book>();
         public DbSet<Comment> Comments => Set<Comment>();
     }
 }

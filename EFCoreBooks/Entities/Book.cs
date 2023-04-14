@@ -8,6 +8,11 @@ namespace EFCoreBooks.Entities
 		public bool OnSale { get; set; }
 		public double Price { get; set; }
 		public DateTime PremiereDate { get; set; }
+		// relacion con la tabla Comment
+		// le decimos que hay varios comentarios relacionados con cada book
+		// HashSet no devuelve los datos de forma ordenada
+		public HashSet<Comment> Comments { get; set; } = new HashSet<Comment>();
+
 	}
 }
 
