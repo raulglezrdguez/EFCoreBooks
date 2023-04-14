@@ -1,0 +1,43 @@
+﻿<Properties StartupConfiguration="{C6BBE619-17F4-4693-9FC1-1265AA5BF739}|https">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.EFCoreBooks PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EFCoreBooks/Data/ApplicationDBContext.cs">
+    <Files>
+      <File FileName="EFCoreBooks/Data/ApplicationDBContext.cs" Line="40" Column="81" />
+      <File FileName="EFCoreBooks/Program.cs" Line="22" Column="1" />
+      <File FileName="EFCoreBooks/appsettings.Development.json" />
+      <File FileName="EFCoreBooks/Entities/Kind.cs" Line="8" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EFCoreBooks" expanded="True">
+            <Node name="EFCoreBooks" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Data" expanded="True">
+                <Node name="ApplicationDBContext.cs" selected="True" />
+              </Node>
+              <Node name="Entities" expanded="True" />
+              <Node name="Migrations" expanded="True">
+                <Node name="20230414114911_CreateKind.cs" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>connectionString</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+</Properties>
