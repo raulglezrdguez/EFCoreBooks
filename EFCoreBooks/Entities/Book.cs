@@ -19,6 +19,8 @@ namespace EFCoreBooks.Entities
         // ef crea una tabla intermedia con los dos campos id de las dos tablas
         public HashSet<Kind> Kinds { get; set; } = new HashSet<Kind>();
 
+		// relacion con la tabla bookauthor
+		public List<BookAuthor> BooksAuthors { get; set; } = new List<BookAuthor>();
 
 	}
 }

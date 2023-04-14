@@ -65,6 +65,7 @@ namespace EFCoreBooks.Data
         public DbSet<Author> Autors => Set<Author>();
         public DbSet<Book> Books => Set<Book>();
         public DbSet<Comment> Comments => Set<Comment>();
+        public DbSet<BookAuthor> BooksAuthors => Set<BookAuthor>();
     }
 }
 
