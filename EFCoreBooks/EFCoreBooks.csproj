@@ -25,9 +25,11 @@
   <ItemGroup>
     <None Remove="Data\" />
     <None Remove="Entities\" />
+    <None Remove="Entities\Configs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Entities\" />
+    <Folder Include="Entities\Configs\" />
   </ItemGroup>
 </Project>

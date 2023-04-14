@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using EFCoreBooks.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -40,13 +41,17 @@ namespace EFCoreBooks.Data
             //modelBuilder.Entity<Kind>().Property(k => k.Name).HasMaxLength(150);
 
             //modelBuilder.Entity<Author>().Property(a => a.Name).HasMaxLength(150);
-            modelBuilder.Entity<Author>().Property(a => a.BirthDate).HasColumnType("date");
-            modelBuilder.Entity<Author>().Property(a => a.Fortune).HasPrecision(8, 2);
+            //modelBuilder.Entity<Author>().Property(a => a.BirthDate).HasColumnType("date");
+            //modelBuilder.Entity<Author>().Property(a => a.Fortune).HasPrecision(8, 2);
 
             //modelBuilder.Entity<Book>().Property(f => f.Title).HasMaxLength(150);
-            modelBuilder.Entity<Book>().Property(f => f.PremiereDate).HasColumnType("date");
+            //modelBuilder.Entity<Book>().Property(f => f.PremiereDate).HasColumnType("date");
 
-            modelBuilder.Entity<Comment>().Property(c => c.Content).HasMaxLength(500);
+            //modelBuilder.Entity<Comment>().Property(c => c.Content).HasMaxLength(500);
+
+            // para aplicar las configuraciones que estan en: Entities/Configs
+            // y no tener que hacer las configuraciones como estan comentadas arriba de esta linea
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
         protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
