@@ -20,16 +20,21 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Data\" />
     <None Remove="Entities\" />
     <None Remove="Entities\Configs\" />
+    <None Remove="DTOs\" />
+    <None Remove="Utils\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Entities\" />
     <Folder Include="Entities\Configs\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
 </Project>

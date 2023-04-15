@@ -3,6 +3,7 @@ using System;
 using EFCoreBooks.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCoreBooks.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230415195533_ChangeListByHashSet")]
+    partial class ChangeListByHashSet
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -142,18 +145,6 @@ namespace EFCoreBooks.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Kinds");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 5,
-                            Name = "Animation"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Fantastic"
-                        });
                 });
 
             modelBuilder.Entity("BookKind", b =>

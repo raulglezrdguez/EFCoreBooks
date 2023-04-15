@@ -10,7 +10,6 @@ namespace EFCoreBooks.Entities
 
 		// para la relacion varios a varios con la tabla books
 		public List<BookAuthor> BooksAuthors { get; set; } = new List<BookAuthor>();
-
 	}
 }
 

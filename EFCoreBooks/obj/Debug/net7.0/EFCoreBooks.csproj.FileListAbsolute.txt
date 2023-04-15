@@ -41,3 +41,5 @@
 /Users/raul/projects/dotnet/EFCoreBooks/EFCoreBooks/obj/Debug/net7.0/EFCoreBooks.pdb
 /Users/raul/projects/dotnet/EFCoreBooks/EFCoreBooks/obj/Debug/net7.0/EFCoreBooks.genruntimeconfig.cache
 /Users/raul/projects/dotnet/EFCoreBooks/EFCoreBooks/obj/Debug/net7.0/ref/EFCoreBooks.dll
+/Users/raul/projects/dotnet/EFCoreBooks/EFCoreBooks/bin/Debug/net7.0/AutoMapper.dll
+/Users/raul/projects/dotnet/EFCoreBooks/EFCoreBooks/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

@@ -10,19 +10,19 @@ namespace EFCoreBooks.Data
     {
         private readonly ILogger<ApplicationDBContext> _logger;
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            IConfigurationRoot configurationRoot = new ConfigurationBuilder()
-                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-                .AddJsonFile("appsettings.json")
-                .Build();
-            var connectionString = "server=localhost;user=root;password=todoporlaurita;database=EFCoreBooks";
-            //var connectionString1 = configurationRoot.GetConnectionString("DefaultConnection");
-            _logger.LogInformation(connectionString);
-            var serverVersion = new MySqlServerVersion(new Version(8, 0, 32));
-            optionsBuilder.UseMySql(connectionString, serverVersion);
-            base.OnConfiguring(optionsBuilder);
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    IConfigurationRoot configurationRoot = new ConfigurationBuilder()
+        //        .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+        //        .AddJsonFile("appsettings.json")
+        //        .Build();
+        //    var connectionString = "server=localhost;user=root;password=todoporlaurita;database=EFCoreBooks";
+        //    //var connectionString1 = configurationRoot.GetConnectionString("DefaultConnection");
+        //    _logger.LogInformation(connectionString);
+        //    var serverVersion = new MySqlServerVersion(new Version(8, 0, 32));
+        //    optionsBuilder.UseMySql(connectionString, serverVersion);
+        //    base.OnConfiguring(optionsBuilder);
+        //}
 
         public ApplicationDBContext(ILogger<ApplicationDBContext> logger) {
             _logger = logger;

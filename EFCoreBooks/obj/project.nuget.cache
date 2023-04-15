@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Cm1LsqLNaBT+ARLpR2jZ/6pP5m3DBEOgHgt6dpyXNuRoUui7M6BZZRZne0WBLx97hCzdFiWtdY6OdXY7vUhUrA==",
+  "dgSpecHash": "Kzcwxw0d3ZRnH+eu7bIoiWvT9rqZOhShrd2sWt2tWDHPHhrgtFs2dvzm5TDsYtEGBjW3mKdYiRX+5elus1XNVA==",
   "success": true,
   "projectFilePath": "/Users/raul/projects/dotnet/EFCoreBooks/EFCoreBooks/EFCoreBooks.csproj",
   "expectedPackageFiles": [
+    "/Users/raul/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/raul/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/raul/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/raul/.nuget/packages/microsoft.aspnetcore.openapi/7.0.5/microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
+    "/Users/raul/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/raul/.nuget/packages/microsoft.entityframeworkcore/7.0.5/microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
     "/Users/raul/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.5/microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",
     "/Users/raul/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.5/microsoft.entityframeworkcore.analyzers.7.0.5.nupkg.sha512",
