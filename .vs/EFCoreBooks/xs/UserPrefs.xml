@@ -1,5 +1,4 @@
 ﻿<Properties StartupConfiguration="{C6BBE619-17F4-4693-9FC1-1265AA5BF739}|https">
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.EFCoreBooks PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -8,22 +7,20 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="EFCoreBooks/Controllers/KindController.cs">
     <Files>
-      <File FileName="EFCoreBooks/Entities/Author.cs" Line="4" Column="15" />
-      <File FileName="EFCoreBooks/DTOs/AuthorDTO.cs" Line="8" Column="5" />
-      <File FileName="EFCoreBooks/Controllers/AuthorController.cs" Line="45" Column="107" />
+      <File FileName="EFCoreBooks/Entities/Author.cs" />
+      <File FileName="EFCoreBooks/DTOs/AuthorDTO.cs" />
+      <File FileName="EFCoreBooks/Controllers/AuthorController.cs" />
       <File FileName="EFCoreBooks/Controllers/KindController.cs" Line="97" Column="25" />
-      <File FileName="EFCoreBooks/Utils/AutoMapperProfiles.cs" Line="14" Column="40" />
-      <File FileName="EFCoreBooks/Controllers/BookController.cs" Line="125" Column="14" />
-      <File FileName="EFCoreBooks/Program.cs" Line="10" Column="5" />
+      <File FileName="EFCoreBooks/Utils/AutoMapperProfiles.cs" />
+      <File FileName="EFCoreBooks/Controllers/BookController.cs" />
+      <File FileName="EFCoreBooks/Program.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="EFCoreBooks" expanded="True">
             <Node name="EFCoreBooks" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="KindController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
               <Node name="DTOs" expanded="True" />
               <Node name="Entities" expanded="True">
@@ -38,4 +35,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
 </Properties>
