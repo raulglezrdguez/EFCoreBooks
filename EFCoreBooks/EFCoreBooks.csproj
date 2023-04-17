@@ -29,6 +29,7 @@
     <None Remove="Entities\Configs\" />
     <None Remove="DTOs\" />
     <None Remove="Utils\" />
+    <None Remove="Entities\Seeds\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -36,5 +37,6 @@
     <Folder Include="Entities\Configs\" />
     <Folder Include="DTOs\" />
     <Folder Include="Utils\" />
+    <Folder Include="Entities\Seeds\" />
   </ItemGroup>
 </Project>

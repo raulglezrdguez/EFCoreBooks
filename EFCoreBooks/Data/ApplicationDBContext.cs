@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using EFCoreBooks.Entities;
+using EFCoreBooks.Entities.Seeds;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -52,6 +53,9 @@ namespace EFCoreBooks.Data
             // para aplicar las configuraciones que estan en: Entities/Configs
             // y no tener que hacer las configuraciones como estan comentadas arriba de esta linea
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+            // cuando se crea el modelo de datos, lleno las tablas con los datos que necesito
+            SeedInitial.Seed(modelBuilder);
         }
 
         protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)

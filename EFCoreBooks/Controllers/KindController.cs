@@ -4,6 +4,7 @@ using EFCoreBooks.Data;
 using EFCoreBooks.DTOs;
 using EFCoreBooks.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFCoreBooks.Controllers
 {
@@ -48,6 +49,56 @@ namespace EFCoreBooks.Controllers
 			await context.SaveChangesAsync();
 			return Ok();
 		}
-	}
+
+		[HttpGet]
+		public async Task<ActionResult<IEnumerable<Kind>>> Get()
+		{
+			return await context.Kinds.OrderBy(k => k.Name).ToListAsync();
+		}
+
+		[HttpGet("name")]
+		public async Task<ActionResult<IEnumerable<Kind>>> Get(string name)
+		{
+			return await context.Kinds.Where(k => k.Name.Contains(name)).ToListAsync();
+		}
+
+		[HttpGet("id")]
+		public async Task<ActionResult<Kind>> Get(int id)
+		{
+			var kind = await context.Kinds.FirstOrDefaultAsync(k => k.Id == id);
+			if (kind is null)
+			{
+				return NotFound();
+			}
+			return kind;
+		}
+
+		[HttpPut("{id}/{name}")]
+		public async Task<ActionResult> Put(int id, string name)
+		{
+			var kind =  context.Kinds.FirstOrDefault(k => k.Id == id);
+			if (kind is null)
+			{
+				return NotFound();
+			}
+
+			kind.Name = name;
+			await context.SaveChangesAsync();
+
+			return Ok();
+		}
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> PutDTO(int id, KindCreateDTO kindCreateDTO)
+        {
+			var kind = mapper.Map<Kind>(kindCreateDTO);
+			kind.Id = id;
+
+			context.Update(kind);
+            await context.SaveChangesAsync();
+
+            return Ok();
+        }
+    }
 }
 

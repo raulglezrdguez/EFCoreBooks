@@ -59,6 +59,73 @@ namespace EFCoreBooks.Controllers
 
             return Ok();
         }
-	}
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Book>>> Get()
+        {
+            return await context.Books
+                .OrderBy(b => b.Title)
+                    .ThenBy(b => b.Price)
+                .ToListAsync();
+        }
+
+        [HttpGet("title_price")]
+        public async Task<ActionResult> GetTitlePrice()
+        {
+            var books = await context.Books.Select(b => new { b.Title, b.Price }).ToListAsync();
+
+            return Ok(books);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Book>> GetById(int id)
+        {
+            // busco los libros, incluyo los comments, kind and bookauthors
+            // los booksauthors los ordeno por el field order,
+            // e incluyo los authors de cada bookauthor
+            // aqui obtengo los campos que hay en la tabla
+            var book = context.Books
+                .Include(b => b.Comments)
+                .Include(b => b.Kinds)
+                .Include(b => b.BooksAuthors.OrderBy(ba => ba.Order))
+                    .ThenInclude(ba => ba.Author)
+                .FirstOrDefault(b => b.Id == id);
+            if (book is null)
+            {
+                return NotFound();
+            }
+
+            return book;
+        }
+
+        [HttpGet("select/{id}")]
+        public async Task<ActionResult> GetByIdSelect(int id)
+        {
+            // busco los libros, incluyo los comments, kind and bookauthors
+            // los booksauthors los ordeno por el field order,
+            // e incluyo los authors de cada bookauthor
+            // aqui obtengo los campos que seleccione de la tabla
+            var book = await context.Books
+                .Select(b => new
+                {
+                    Id = b.Id,
+                    Title = b.Title,
+                    Price = b.Price,
+                    Kinds = b.Kinds.Select(k => new
+                    {
+                        Name = k.Name
+                    }).ToList(),
+                    Authors = b.BooksAuthors.OrderBy(ba => ba.Order).Select(ba => new { ba.Author.Name }),
+                    CommentsCount = b.Comments.Count(),
+                })
+                .FirstOrDefaultAsync(b => b.Id == id);
+            if (book is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(book);
+        }
+    }
 }
 

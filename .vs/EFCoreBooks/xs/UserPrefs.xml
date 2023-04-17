@@ -1,16 +1,20 @@
 ﻿<Properties StartupConfiguration="{C6BBE619-17F4-4693-9FC1-1265AA5BF739}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.EFCoreBooks PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="EFCoreBooks/Controllers/BookController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EFCoreBooks/Controllers/KindController.cs">
     <Files>
-      <File FileName="EFCoreBooks/Entities/BookAuthor.cs" Line="9" Column="35" />
-      <File FileName="EFCoreBooks/Entities/Book.cs" Line="1" Column="1" />
-      <File FileName="EFCoreBooks/Entities/Author.cs" Line="12" Column="1" />
-      <File FileName="EFCoreBooks/Entities/Kind.cs" Line="1" Column="1" />
-      <File FileName="EFCoreBooks/Controllers/BookController.cs" Line="61" Column="10" />
-      <File FileName="EFCoreBooks/DTOs/BookAuthorCreateDTO.cs" Line="1" Column="1" />
-      <File FileName="EFCoreBooks/DTOs/BookCreateDTO.cs" Line="12" Column="1" />
+      <File FileName="EFCoreBooks/Entities/Author.cs" Line="4" Column="15" />
+      <File FileName="EFCoreBooks/DTOs/AuthorDTO.cs" Line="8" Column="5" />
+      <File FileName="EFCoreBooks/Controllers/AuthorController.cs" Line="45" Column="107" />
+      <File FileName="EFCoreBooks/Controllers/KindController.cs" Line="97" Column="25" />
+      <File FileName="EFCoreBooks/Utils/AutoMapperProfiles.cs" Line="14" Column="40" />
+      <File FileName="EFCoreBooks/Controllers/BookController.cs" Line="125" Column="14" />
+      <File FileName="EFCoreBooks/Program.cs" Line="10" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,14 +22,14 @@
           <Node name="EFCoreBooks" expanded="True">
             <Node name="EFCoreBooks" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="BookController.cs" selected="True" />
+                <Node name="KindController.cs" selected="True" />
               </Node>
               <Node name="Data" expanded="True" />
               <Node name="DTOs" expanded="True" />
               <Node name="Entities" expanded="True">
                 <Node name="Configs" expanded="True" />
+                <Node name="Seeds" expanded="True" />
               </Node>
-              <Node name="Migrations" expanded="True" />
               <Node name="Utils" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
             </Node>
@@ -34,8 +38,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.EFCoreBooks PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

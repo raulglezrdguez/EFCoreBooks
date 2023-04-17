@@ -11,6 +11,7 @@ namespace EFCoreBooks.Utils
 		{
             CreateMap<KindCreateDTO, Kind>();
             CreateMap<AuthorCreateDTO, Author>();
+            CreateMap<Author, AuthorDTO>();
 
             CreateMap<BookCreateDTO, Book>()
                 .ForMember(b => b.Kinds,
